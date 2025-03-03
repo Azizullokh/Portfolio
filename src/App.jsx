@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes , Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import MainLoyaut from "./layouts/MainLoyaut";
 import About from "./pages/About";
@@ -52,6 +52,7 @@ function App() {
           </MainLoyaut>
         }
       ></Route>
+      <Route path="*" element={<Navigate to="/home" />} />
     </Routes>
   );
 }

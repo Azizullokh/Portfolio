@@ -64,18 +64,26 @@ function MainLoyaut({ children }) {
         flex flex-col items-center pt-20 space-y-6 transition-all duration-300`}
         >
           <button
-            className="absolute top-5 right-5 text-3xl text-gray-700 dark:text-white hover:text-red-500 transition-all z-50"
+            className="absolute top-5 right-8 text-3xl text-gray-700 dark:text-white hover:text-red-500 transition-all z-50"
             onClick={() => setIsOpen(false)}
           >
             <FiX />
           </button>
-          <ul className="flex flex-col items-center space-y-6 pb-[30px]">
+          <motion.ul
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="flex flex-col items-center space-y-6 pb-[30px]"
+          >
             {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
               <motion.li
                 key={item}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1, duration: 0 }}
+                transition={{ duration: 0 }}
+                whileHover={{ scale: 1.1, transition: { duration: 0.2 }}}
+                whileTap={{ scale: 0.95 }}
                 className="text-gray-700 dark:text-white hover:text-green-500 text-lg font-semibold"
               >
                 <Link
@@ -86,7 +94,7 @@ function MainLoyaut({ children }) {
                 </Link>
               </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </motion.div>
       </header>
       <main className="mt-[80px]">{children}</main>

@@ -15,7 +15,7 @@ const Contact = () => {
         "lfBRm8hBIVU9ObsC_"
       )
       .then(() => {
-        toast.success("✅ Message sent successfully!", {
+        toast.success("Message sent successfully!", {
           style: {
             borderRadius: "8px",
             background: "#333",
@@ -26,7 +26,7 @@ const Contact = () => {
         });
       })
       .catch(() => {
-        toast.error("❌ Failed to send message!", {
+        toast.error("Failed to send message!", {
           style: {
             borderRadius: "8px",
             background: "#ff4d4f",
@@ -95,10 +95,9 @@ const Contact = () => {
               name="to_name"
               placeholder="Your Name"
               required
-              className="w-full p-3 border border-gray-300 dark:border-gray-700 bg-white 
-                     dark:bg-gray-700 text-gray-800 dark:text-white rounded 
-                     focus:ring focus:ring-green-400 focus:border-green-500 
-                     shadow-sm dark:shadow-md dark:shadow-gray-900"
+              className="w-full p-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-700 
+                     text-gray-800 dark:text-white rounded focus:ring focus:ring-green-400 
+                     focus:border-green-500 shadow-sm dark:shadow-md dark:shadow-gray-900"
             />
             <input
               type="email"
