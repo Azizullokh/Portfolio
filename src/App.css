@@ -1,0 +1,12 @@
+@layer base {
+    html,
+    body {
+        overflow: auto;
+    }
+}
+
+html,
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
