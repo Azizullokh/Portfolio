@@ -52,7 +52,7 @@ function App() {
           </MainLoyaut>
         }
       ></Route>
-      <Route path="*" element={<Navigate to="/home" />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }
