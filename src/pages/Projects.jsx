@@ -7,11 +7,11 @@ import loginregister from "../ProjectsImage/login-register.png";
 import myprofile from "../ProjectsImage/my-profile.png";
 import pizzalayout from "../ProjectsImage/pizza-layout.png";
 import girllayout from "../ProjectsImage/girl-layout.png";
-import todolist from "../ProjectsImage/todolist.png";
 import moviesearch from "../ProjectsImage/movie-search.png";
 import pomodoro from "../ProjectsImage/pomodoro.png";
 import uzlayout from "../ProjectsImage/uz-layout.png";
 import githubusers from "../ProjectsImage/github-users.png";
+import todolist from '../ProjectsImage/todolistt.png'
 
 const ProjectsNew = [
   {
@@ -94,8 +94,8 @@ const ProjectsNew = [
     technologies: ["JS", "CSS"],
     description: "A simple ToDo list application for managing daily tasks.",
     name: "ToDo List",
-    responsive: false,
-    style: "🟠",
+    responsive: true,
+    style: "🟢",
   },
   {
     id: 9,
