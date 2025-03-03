@@ -37,7 +37,7 @@ const ProjectsNew = [
   {
     id: 3,
     image: wordsearch,
-    link: "https://searchforanyword.vercel.app/",
+    link: "https://calm-begonia-aa5a26.netlify.app/",
     name: "Word search",
     description: "An app to look up words and find their meaning.",
     technologies: ["JS", "REST API", "+AUDIO"],
