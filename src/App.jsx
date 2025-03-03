@@ -11,7 +11,7 @@ import "../src/App.css";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/home" />} />
+      <Route path="/" element={<Navigate to="/home" replace/>} />
       <Route
         path="/home"
         element={
