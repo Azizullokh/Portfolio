@@ -19,6 +19,7 @@ const ProjectsNew = [
 id:0,
 image:uzummarket,
 link:'https://uzum-market77.netlify.app/',
+name: 'Uzum Market',
 description: 'Store created using React and Tailwind CSS',
 technologies: ["React.js" , "Tailwind CSS" , 'REST API'],
 responsive: true,
