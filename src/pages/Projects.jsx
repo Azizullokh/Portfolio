@@ -12,8 +12,18 @@ import pomodoro from "../ProjectsImage/pomodoro.png";
 import uzlayout from "../ProjectsImage/uz-layout.png";
 import githubusers from "../ProjectsImage/github-users.png";
 import todolist from '../ProjectsImage/todolistt.png'
+import uzummarket from '../ProjectsImage/uzummarket.png'
 
 const ProjectsNew = [
+  {
+id:0,
+image:uzummarket,
+link:'https://uzum-market77.netlify.app/',
+description: 'Store created using React and Tailwind CSS',
+technologies: ["React.js" , "Tailwind CSS" , 'REST API'],
+responsive: true,
+style: '🟢'
+  },
   {
     id: 1,
     image: comfystore,
