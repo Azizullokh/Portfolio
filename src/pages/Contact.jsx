@@ -9,10 +9,10 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_ygzyqtr",
+        "service_fop8kjn",
         "template_14c3n4n",
         form.current,
-        "lfBRm8hBIVU9ObsC_"
+        "KZWk9YrieDl6orVqv"
       )
       .then(() => {
         toast.success("Message sent successfully!", {
@@ -76,7 +76,7 @@ const Contact = () => {
               <p className="text-gray-700 dark:text-gray-300">
                 <span className="font-semibold text-green-500">Email</span>
                 <br />
-                azizulloabdumannopov77@gmail.com
+                azizfrontend86@gmail.com
               </p>
             </div>
           </div>

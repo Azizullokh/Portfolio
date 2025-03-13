@@ -98,7 +98,7 @@ const About = () => {
           My Goal
         </h3>
         <h3 className="text-2xl text-green-500 font-bold mt-6">
-          🚀 Becoming a Professional Frontend Developer
+          Becoming a Professional Frontend Developer
         </h3>
         <p className="mb-4 dark:text-white">
           My goal is to become a highly skilled{" "}

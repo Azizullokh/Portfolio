@@ -16,8 +16,8 @@ function Home() {
   }
   return (
     <section className="transition-all duration-200 flex flex-col items-center justify-center w-full h-full bg-gray-200 pt-[1px] dark:bg-black md:pt-10">
-      <div className="home min-h-screen flex flex-col md:flex-row  items-start gap-[0px] md:gap-6 w-full max-w-[1200px]">
-        <div className="flex items-start gap-[10px] mr-[10px]">
+      <div className="home min-h-screen flex flex-col md:flex-row items-start gap-[0px] w-full max-w-[1200px]">
+        <div className="flex items-start gap-[10px] ">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}

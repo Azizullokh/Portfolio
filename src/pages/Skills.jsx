@@ -42,9 +42,6 @@ function Skills() {
             <span className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-md">
               CSS3
             </span>
-            <span className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-md">
-              Tailwind CSS
-            </span>
           </div>
         </motion.div>
         <motion.div
