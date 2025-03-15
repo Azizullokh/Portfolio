@@ -73,7 +73,7 @@ function Home() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="md:hidden bg-white dark:bg-gray-900 w-full mt-[10px] flex flex-col gap-3 items-center shadow-2xl rounded-lg p-[10px]"
+              className="md:hidden mr-[10px] md:mr-[0px] bg-white dark:bg-gray-900 w-full mt-[10px] flex flex-col gap-3 items-center shadow-2xl rounded-lg p-[10px]"
             >
               <Download></Download>
               <button
@@ -88,7 +88,7 @@ function Home() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
-              className="flex flex-col h-[72px] items-stretch gap-0 mt-[10px] shadow-2xl rounded-lg p-[10px] bg-white dark:bg-gray-900"
+              className="flex flex-col mr-[10px] h-[72px] items-stretch gap-0 mt-[10px] shadow-2xl rounded-lg p-[10px] bg-white dark:bg-gray-900"
             >
               <p className="text-center text-gray-500 italic text-[10px]">
                 "Building the Future, One Line of Code at a Time"

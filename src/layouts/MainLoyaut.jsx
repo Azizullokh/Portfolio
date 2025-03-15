@@ -57,8 +57,8 @@ function MainLoyaut({ children }) {
           </div>
         </div>
         <motion.div
-          initial={{ x: "100%", opacity: 0 }}
-          animate={{ x: isOpen ? 0 : "100%", opacity: isOpen ? 1 : 0 }}
+          initial={{ x: "100%", opacity: 10 }}
+          animate={{ x: isOpen ? 0 : "100%", opacity: isOpen ? 1 : 2 }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
           className={`md:hidden fixed top-0 right-0 w-[60%] bg-white dark:bg-gray-900 shadow-lg z-50 
         flex flex-col items-center pt-20 space-y-6 transition-all duration-300`}
@@ -82,7 +82,7 @@ function MainLoyaut({ children }) {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 }}
-                whileHover={{ scale: 1.1, transition: { duration: 0.2 }}}
+                whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
                 whileTap={{ scale: 0.95 }}
                 className="text-gray-700 dark:text-white hover:text-green-500 text-lg font-semibold"
               >
