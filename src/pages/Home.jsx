@@ -73,7 +73,7 @@ function Home() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="md:hidden mr-[10px] md:mr-[0px] bg-white dark:bg-gray-900 w-full mt-[10px] flex flex-col gap-3 items-center shadow-2xl rounded-lg p-[10px]"
+              className="md:hidden mr-[10px] p-[10px] md:mr-[0px] bg-white dark:bg-gray-900 max-w-[calc(100%-10px)] mt-[10px] flex flex-col gap-3 items-center shadow-2xl rounded-lg"
             >
               <Download></Download>
               <button
