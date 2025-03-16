@@ -3,6 +3,31 @@ import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import DarkModeToggle from "../components/darkmode";
 import { motion } from "framer-motion";
+import LanguageSwitcher from "../components/langSwitcher";
+import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
+import { BsPerson, BsCodeSlash } from "react-icons/bs";
+import { MdOutlineContactMail } from "react-icons/md";
+
+const menuItems = [
+  { name: "Home", path: "/", icon: <AiOutlineHome className="text-xl" /> },
+  { name: "About", path: "/about", icon: <BsPerson className="text-xl" /> },
+  {
+    name: "Skills",
+    path: "/skills",
+    icon: <BsCodeSlash className="text-xl" />,
+  },
+  {
+    name: "Projects",
+    path: "/projects",
+    icon: <AiOutlineProject className="text-xl" />,
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+    icon: <MdOutlineContactMail className="text-xl" />,
+  },
+];
+
 function MainLoyaut({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -47,7 +72,10 @@ function MainLoyaut({ children }) {
             )}
           </nav>
           <div className="flex items-center space-x-4">
-            <DarkModeToggle></DarkModeToggle>
+            <div className="md:flex gap-[8px] items-center hidden">
+              <LanguageSwitcher></LanguageSwitcher>
+              <DarkModeToggle></DarkModeToggle>
+            </div>{" "}
             <button
               className="md:hidden text-2xl text-gray-700"
               onClick={() => setIsOpen(!isOpen)}
@@ -69,28 +97,33 @@ function MainLoyaut({ children }) {
           >
             <FiX />
           </button>
+          <div className="flex items-center gap-5">
+            <LanguageSwitcher></LanguageSwitcher>
+            <DarkModeToggle></DarkModeToggle>
+          </div>
           <motion.ul
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="flex flex-col items-center space-y-6 pb-[30px]"
+            className="flex flex-col items-start space-y-6 pb-[30px] pr-[50px]"
           >
-            {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+            {menuItems.map(({ name, path, icon }) => (
               <motion.li
-                key={item}
+                key={name}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 }}
                 whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
                 whileTap={{ scale: 0.95 }}
-                className="text-gray-700 dark:text-white hover:text-green-500 text-lg font-semibold"
+                className="text-gray-700 dark:text-white hover:text-green-500 text-lg font-semibold flex items-start gap-2"
               >
                 <Link
-                  to={`/${item.toLowerCase()}`}
+                  className="flex gap-4 items-center"
+                  to={path}
                   onClick={() => setIsOpen(false)}
                 >
-                  {item}
+                  {icon} {name}
                 </Link>
               </motion.li>
             ))}

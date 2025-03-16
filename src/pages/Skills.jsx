@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import useLanguageStore from "../store/languageStore";
 
 function Skills() {
+  const { translation } = useLanguageStore();
   return (
     <section className="transition-all duration-300 bg-gray-200 p-8 w-full h-full min-h-screen dark:bg-black">
       <motion.h2
@@ -10,7 +12,7 @@ function Skills() {
         transition={{ delay: 0.3, duration: 0.5 }}
         className="text-3xl dark:text-white font-bold text-center mb-6"
       >
-        My Skills
+        {translation.myskills}
       </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <motion.div
@@ -19,7 +21,9 @@ function Skills() {
           transition={{ duration: 0.5 }}
           className="flex gap-3 dark:bg-gray-900 flex-col shadow-lg bg-white items-start rounded-lg p-[20px]"
         >
-          <h3 className="text-green-500 font-bold">🖥️ Frontend Technologies</h3>
+          <h3 className="text-green-500 font-bold">
+            🖥️ {translation.Technologies}
+          </h3>
           <div className="flex flex-wrap gap-3 mt-2 items-start">
             <span className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-md">
               JavaScript
@@ -50,7 +54,7 @@ function Skills() {
           transition={{ duration: 0.5 }}
           className="flex dark:bg-gray-900 bg-white gap-3 flex-col shadow-lg items-start rounded-lg p-[20px]"
         >
-          <h3 className="text-green-500 font-bold">🌐 Working with APIs</h3>
+          <h3 className="text-green-500 font-bold">🌐 {translation.wwa}</h3>
           <div className="flex flex-wrap gap-3 mt-2 items-start">
             <span className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-md">
               RESTful API
@@ -69,7 +73,7 @@ function Skills() {
           transition={{ duration: 0.5 }}
           className="flex gap-3 dark:bg-gray-900 bg-white flex-col shadow-lg items-start rounded-lg p-[20px]"
         >
-          <h3 className="text-green-500 font-bold">🛠️ Tools & DevOps</h3>
+          <h3 className="text-green-500 font-bold">🛠️ {translation.tools}</h3>
           <div className="flex flex-wrap gap-3 mt-2 items-start">
             <span className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-md">
               Git
@@ -94,7 +98,7 @@ function Skills() {
           transition={{ duration: 0.5 }}
           className="flex gap-3 bg-white dark:bg-gray-900 flex-col shadow-lg items-start rounded-lg p-[20px]"
         >
-          <h3 className="text-green-500 font-bold">📱 Responsive Design</h3>
+          <h3 className="text-green-500 font-bold">📱 {translation.RD}</h3>
           <div className="flex flex-wrap gap-3 mt-2 items-start">
             <span className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-md">
               Media Queries
@@ -110,7 +114,7 @@ function Skills() {
           transition={{ duration: 0.5 }}
           className="flex gap-3 bg-white dark:bg-gray-900 flex-col shadow-lg items-start rounded-lg p-[20px]"
         >
-          <h3 className="text-green-500 font-bold">🔄 State Management</h3>
+          <h3 className="text-green-500 font-bold">🔄 {translation.state}</h3>
           <div className="flex flex-wrap gap-3 mt-2 items-start">
             <span className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-md">
               Redux Toolkit
@@ -129,7 +133,7 @@ function Skills() {
           transition={{ duration: 0.5 }}
           className="flex gap-3 bg-white dark:bg-gray-900 flex-col shadow-lg items-start rounded-lg p-[20px]"
         >
-          <h3 className="text-green-500 font-bold">🌟 Soft Skills</h3>
+          <h3 className="text-green-500 font-bold">🌟 {translation.soft}</h3>
           <div className="flex flex-wrap gap-3 mt-2 items-start">
             <span className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-md">
               Solving problems

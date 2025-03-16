@@ -8,8 +8,10 @@ import { useNavigate } from "react-router-dom";
 import Download from "../svg/Download";
 import Recomend from "../svg/Recomend";
 import { motion } from "framer-motion";
+import useLanguageStore from "../store/languageStore";
 function Home() {
   const navigate = useNavigate();
+  const { translation } = useLanguageStore();
   function handlenavigate() {
     navigate("/contact");
     setIsOpen(false);
@@ -22,7 +24,7 @@ function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="dark:bg-gray-900 flex md:w-[100%] flex-col bg-white shadow-2xl rounded-lg p-[10px] mt-[10px] ml-[10px] md:p-8 text-center items-center"
+            className="dark:bg-gray-900 flex md:w-[100%] flex-col bg-white shadow-2xl rounded-lg p-[10px] mt-[-7px] md:mt-[10px] ml-[10px] md:p-8 text-center items-center"
           >
             <div className="w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] flex md:p-[0px] p-[0px] rounded-full lg:h-[280px] lg:w-[280px] dark:border-white items-center border-2 border-green-500">
               <img
@@ -32,10 +34,10 @@ function Home() {
               />
             </div>
             <h2 className="text-[13px] sm:text-[14px] md:text-2xl font-semibold dark:text-white mt-4">
-              Azizullokh Abdumannopov
+              {translation.name}
             </h2>
             <p className="text-[10px] md:text-[17px] text-gray-600 dark:text-gray-400">
-              Frontend Developer
+              {translation.who}
             </p>
             <div className="flex justify-center space-x-3 sm:space-x-4 md:space-x-4 mt-3">
               <a
@@ -73,14 +75,14 @@ function Home() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="md:hidden mr-[10px] p-[10px] md:mr-[0px] bg-white dark:bg-gray-900 max-w-[calc(100%-10px)] mt-[10px] flex flex-col gap-3 items-center shadow-2xl rounded-lg"
+              className="md:hidden mr-[10px] p-[10px] md:mr-[0px] bg-white dark:bg-gray-900 max-w-[calc(100%-10px)] mt-[-7px] flex flex-col gap-3 items-center shadow-2xl rounded-lg"
             >
               <Download></Download>
               <button
                 className="px-1 py-2 text-start text-[10px] bg-green-600 cursor-pointer w-full md:text-[16px] text-white rounded-lg shadow-md hover:bg-green-700 transition-all duration-300 active:scale-95"
                 onClick={handlenavigate}
               >
-                💼 Hire me
+                {translation.hire}
               </button>
               <Recomend></Recomend>
             </motion.div>
@@ -91,7 +93,7 @@ function Home() {
               className="flex flex-col mr-[10px] h-[72px] items-stretch gap-0 mt-[10px] shadow-2xl rounded-lg p-[10px] bg-white dark:bg-gray-900"
             >
               <p className="text-center text-gray-500 italic text-[10px]">
-                "Building the Future, One Line of Code at a Time"
+                "{translation.quote}"
               </p>
             </motion.div>
           </div>
@@ -101,25 +103,25 @@ function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="flex items-center w-full md:max-w-[900px] "
+            className="flex items-center w-full md:max-w-[900px] md:mt-0"
           >
             <div className="bg-white dark:bg-gray-900 md:p-8 shadow-2xl rounded-lg w-full p-[10px] m-[10px]">
               <h3 className="text-[16px] md:text-lg text-gray-500 mb-[10px] md:mb-[30px] dark:text-white">
-                Hello!
+                {translation.greeting}!
               </h3>
               <h1 className="text-[15px] md:text-4xl font-bold w-full dark:text-white">
-                I'M{" "}
-                <span className="text-green-600">AZIZULLOKH ABDUMANNOPOV</span>,
-                A FRONTEND DEVELOPER CRAFTING{" "}
-                <span className="text-gray-600">USER-CENTRIC DESIGN</span> WITH
-                PIXEL-PERFECT PRECISION.
+                {translation.i}{" "}
+                <span className="text-green-600">
+                  {translation.introduction}
+                </span>
+                {translation.job}{" "}
+                <span className="text-gray-600">{translation.user} </span>
+                {translation.pixel}
               </h1>
               <div className="text-[15px] md:text-[20px] flex flex-col gap-3 mt-5 text-green-600">
-                <span>🟢 Creating Modern & Scalable Web Applications</span>
-                <span>🟢 Building Interactive & Responsive Websites</span>
-                <span>
-                  🟢 Frontend Developer | React & JavaScript Enthusiast
-                </span>
+                <span>{translation.skill1}</span>
+                <span>{translation.skill2}</span>
+                <span>{translation.skill3}</span>
               </div>
             </div>
           </motion.div>
@@ -135,7 +137,7 @@ function Home() {
                 className="md:px-5 md:py-3 px-2 py-1 w-full bg-green-600 cursor-pointer text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition-all duration-300 active:scale-95"
                 onClick={handlenavigate}
               >
-                💼 Hire me
+                {translation.hire}
               </button>
               <Recomend></Recomend>
             </motion.div>

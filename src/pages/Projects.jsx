@@ -11,19 +11,20 @@ import moviesearch from "../ProjectsImage/movie-search.png";
 import pomodoro from "../ProjectsImage/pomodoro.png";
 import uzlayout from "../ProjectsImage/uz-layout.png";
 import githubusers from "../ProjectsImage/github-users.png";
-import todolist from '../ProjectsImage/todolistt.png'
-import uzummarket from '../ProjectsImage/uzummarket.png'
+import todolist from "../ProjectsImage/todolistt.png";
+import uzummarket from "../ProjectsImage/uzummarket.png";
+import useLanguageStore from "../store/languageStore";
 
 const ProjectsNew = [
   {
-id:0,
-image:uzummarket,
-link:'https://uzum-market77.netlify.app/',
-name: 'Uzum Market',
-description: 'Store created using React and Tailwind CSS',
-technologies: ["React.js" , "Tailwind CSS" , 'REST API'],
-responsive: true,
-style: '🟢'
+    id: 0,
+    image: uzummarket,
+    link: "https://uzum-market77.netlify.app/",
+    name: "Uzum Market",
+    description: "Store created using React and Tailwind CSS",
+    technologies: ["React.js", "Tailwind CSS", "REST API"],
+    responsive: true,
+    style: "🟢",
   },
   {
     id: 1,
@@ -152,11 +153,12 @@ style: '🟢'
   },
 ];
 function Projects() {
+  const { translation } = useLanguageStore();
   return (
     <div className="bg-gray-200 dark:bg-black py-12">
       <div className="container mx-auto px-4">
         <h1 className="text-center text-4xl font-bold text-gray-900 dark:text-white mb-8">
-          My Projects
+          {translation.Myprojects}
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[35px] md:w-[85%] mx-auto">
           {ProjectsNew.length > 0 &&

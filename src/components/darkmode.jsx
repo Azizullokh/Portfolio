@@ -8,14 +8,14 @@ export default function DarkModeToggle() {
   );
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.setAttribute("data-theme", "dark"); // ✅ data-theme="dark" qo‘shiladi
+      document.documentElement.setAttribute("data-theme", "dark");
     } else {
       document.documentElement.removeAttribute("data-theme");
     }
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
-    width: 62,
+    width: 58,
     height: 34,
     padding: 7,
     "& .MuiSwitch-switchBase": {
@@ -74,6 +74,7 @@ export default function DarkModeToggle() {
       control={
         <MaterialUISwitch
           sx={{ m: 1 }}
+          className="m-0"
           checked={darkMode}
           onChange={() => setDarkMode(!darkMode)}
         />

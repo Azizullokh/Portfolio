@@ -3,7 +3,9 @@ import emailjs from "emailjs-com";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
+import useLanguageStore from "../store/languageStore";
 const Contact = () => {
+  const { translation } = useLanguageStore();
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -49,16 +51,18 @@ const Contact = () => {
       >
         <div className="flex-1 space-y-6">
           <h2 className="text-3xl font-bold text-gray-800 dark:text-white text-center lg:text-left">
-            Contact Me
+            {translation.Contactme}
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-center lg:text-left">
-            Any questions? Feel free to contact me at any time.
+            {translation.questions}
           </p>
           <div className="space-y-4 text-center lg:text-left">
             <div className="flex flex-col lg:flex-row items-center gap-4">
               <FaMapMarkerAlt className="text-xl text-green-500" />
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-green-500">Address</span>
+                <span className="font-semibold text-green-500">
+                  {translation.adress}
+                </span>
                 <br />
                 Uzbekistan, Fergana, Kuvasay, 6
               </p>
@@ -66,7 +70,9 @@ const Contact = () => {
             <div className="flex flex-col lg:flex-row items-center gap-4">
               <FaPhoneAlt className="text-xl text-green-500" />
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-green-500">Phone</span>
+                <span className="font-semibold text-green-500">
+                  {translation.phone}
+                </span>
                 <br />
                 +998 91 398 79 42
               </p>
@@ -74,7 +80,9 @@ const Contact = () => {
             <div className="flex flex-col lg:flex-row items-center gap-4">
               <FaEnvelope className="text-xl text-green-500" />
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-green-500">Email</span>
+                <span className="font-semibold text-green-500">
+                  {translation.email}
+                </span>
                 <br />
                 azizfrontend86@gmail.com
               </p>
@@ -83,7 +91,7 @@ const Contact = () => {
         </div>
         <div className="flex-1 bg-gray-100 dark:bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg">
           <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 text-center">
-            Send a Message
+            {translation.Send}
           </h3>
           <form
             ref={form}
@@ -121,7 +129,7 @@ const Contact = () => {
               className="w-full bg-green-500 text-white py-3 rounded hover:bg-green-600 
                      transition-all duration-300 focus:ring focus:ring-green-400 shadow-lg"
             >
-              Send Message
+              {translation.Send}
             </button>
           </form>
         </div>
