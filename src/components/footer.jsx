@@ -52,7 +52,7 @@ const icons = [
 const Footer = () => {
   return (
     <footer className="bg-white dark:bg-gray-900 text-white py-5 mt-10 overflow-hidden">
-      <p className="mb-4 text-sm text-center">
+      <p className="mb-4 text-sm text-center text-black dark:text-white">
         Crafted by Azizullokh ⚡ Powered by React & Tailwind
       </p>
       <div className="relative w-full flex items-center">

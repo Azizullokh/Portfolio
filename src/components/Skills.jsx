@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 const SkillBar = ({ skill, level }) => (
   <div className="mb-4">
-    <p className="text-white font-semibold">
+    <p className="text-black dark:text-white font-semibold">
       {skill} - {level}%
     </p>
-    <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+    <div className="w-full bg-gray-400 rounded-full h-2 overflow-hidden">
       <motion.div
         initial={{ width: "0%" }}
         animate={{ width: `${level}%` }}
@@ -18,7 +18,7 @@ const SkillBar = ({ skill, level }) => (
 
 const Skillss = () => (
   <div className="flex flex-col lg:flex-row gap-6 items-center justify-center max-w-4xl mx-auto py-4">
-    <div className="bg-gray-900 rounded-lg shadow-md p-6 w-full lg:w-1/2 h-full min-h-[300px] flex flex-col">
+    <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 w-full lg:w-1/2 h-full min-h-[300px] flex flex-col">
       <h2 className="text-xl text-green-400 font-bold mb-4 text-center">
         Technologies
       </h2>
@@ -30,8 +30,8 @@ const Skillss = () => (
       </div>
     </div>
 
-    <div className="bg-gray-900 rounded-lg shadow-md p-6 w-full lg:w-1/2 h-full min-h-[300px] flex flex-col">
-      <h2 className="text-xl text-blue-400 font-bold mb-4 text-center">
+    <div className="bg-white dark:bg-gray-900  rounded-lg shadow-lg p-6 w-full lg:w-1/2 h-full min-h-[300px] flex flex-col">
+      <h2 className="text-xl text-green-400 font-bold mb-4 text-center">
         Tools
       </h2>
       <div className="flex-grow">

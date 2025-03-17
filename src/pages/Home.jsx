@@ -33,7 +33,7 @@ function Home() {
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
-            <h2 className="text-[13px] sm:text-[14px] md:text-2xl font-semibold dark:text-white mt-4">
+            <h2 className="text-[11px] sm:text-[14px] md:text-2xl font-semibold dark:text-white mt-4">
               {translation.name}
             </h2>
             <p className="text-[10px] md:text-[17px] text-gray-600 dark:text-gray-400">
