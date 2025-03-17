@@ -69,7 +69,7 @@ const ProjectsNew = [
   {
     id: 5,
     image: myprofile,
-    link: "https://old-profile-rust.vercel.app/",
+    link: "old-profile-git-main-azizullokhs-projects.vercel.app",
     name: "My Profile",
     description:
       "A site about my personal profile, experience and skills. (not realy)",
@@ -155,9 +155,9 @@ const ProjectsNew = [
 function Projects() {
   const { translation } = useLanguageStore();
   return (
-    <div className="bg-gray-200 dark:bg-black py-12">
+    <div className="bg-gray-200 dark:bg-black md:py-12 py-3">
       <div className="container mx-auto px-4">
-        <h1 className="text-center text-4xl font-bold text-gray-900 dark:text-white mb-8">
+        <h1 className="text-center text-4xl font-bold text-gray-900 dark:text-white mb-10">
           {translation.Myprojects}
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[35px] md:w-[85%] mx-auto">

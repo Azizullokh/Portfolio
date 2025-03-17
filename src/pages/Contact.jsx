@@ -40,7 +40,7 @@ const Contact = () => {
       });
   };
   return (
-    <div className="flex items-center justify-center pt-10 pb-10 md:min-h-screen px-4 bg-gray-200 dark:bg-gray-950 transition-all">
+    <div className="flex mx-auto items-center justify-center pb-4 min-h-[72vh] md:min-h-[80vh] px-4 bg-gray-200 dark:bg-black transition-all">
       <Toaster position="top-right" reverseOrder={false} />
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}

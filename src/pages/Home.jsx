@@ -17,8 +17,8 @@ function Home() {
     setIsOpen(false);
   }
   return (
-    <section className="transition-all duration-200 flex flex-col items-center justify-center w-full h-full bg-gray-200 pt-[1px] dark:bg-black md:pt-10">
-      <div className="home min-h-screen flex flex-col md:flex-row items-start gap-[0px] w-full max-w-[1200px]">
+    <section className="flex-grow transition-all duration-200 flex flex-col items-center justify-center w-full h-full bg-gray-200 pt-[1px] dark:bg-black md:pt-10">
+      <div className="home min-h-[72vh] flex flex-col md:flex-row items-start gap-0 w-[100%] mx-auto max-w-[1200px]">
         <div className="flex items-start gap-[10px] ">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

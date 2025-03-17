@@ -1,19 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
 import useLanguageStore from "../store/languageStore";
+import Skil from "../components/Skills";
 
 function Skills() {
   const { translation } = useLanguageStore();
   return (
-    <section className="transition-all duration-300 bg-gray-200 p-8 w-full h-full min-h-screen dark:bg-black">
+    <section className="transition-all duration-300 bg-gray-200 px-8 py-[15px] w-full h-full min-h-screen dark:bg-black">
       <motion.h2
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
-        className="text-3xl dark:text-white font-bold text-center mb-6"
+        className="text-3xl dark:text-white font-bold text-center mb-6 md:mt-4 mt-0"
       >
         {translation.myskills}
       </motion.h2>
+
+      <Skil></Skil>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <motion.div
           initial={{ opacity: 0, x: -50 }}

@@ -7,6 +7,7 @@ import LanguageSwitcher from "../components/langSwitcher";
 import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
 import { BsPerson, BsCodeSlash } from "react-icons/bs";
 import { MdOutlineContactMail } from "react-icons/md";
+import Footer from "../components/footer";
 
 const menuItems = [
   { name: "Home", path: "/", icon: <AiOutlineHome className="text-xl" /> },
@@ -130,8 +131,10 @@ function MainLoyaut({ children }) {
           </motion.ul>
         </motion.div>
       </header>
-      <main className="mt-[80px]">{children}</main>
-      <footer></footer>
+      <main className="flex mt-[80px] md:mt-[60px] flex-grow">{children}</main>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
   );
 }
