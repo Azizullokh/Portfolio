@@ -14,10 +14,20 @@ import githubusers from "../ProjectsImage/github-users.png";
 import todolist from "../ProjectsImage/todolistt.png";
 import uzummarket from "../ProjectsImage/uzummarket.png";
 import useLanguageStore from "../store/languageStore";
-
+import deerly from '../ProjectsImage/deerly.png'
 const ProjectsNew = [
   {
-    id: 0,
+    id:0,
+    image: deerly,
+    link: "https://final-exam-peach.vercel.app",
+    name: "Deerly",
+    description: "Site similar to pinterest with registration from google",
+    technologies: ["React.js" , "Tailwind css" , "REST API" , "Firebase"] ,
+    responsive: true ,
+    style: "🟢"
+  },
+  {
+    id: 1,
     image: uzummarket,
     link: "https://uzum-market77.netlify.app/",
     name: "Uzum Market",
@@ -27,7 +37,7 @@ const ProjectsNew = [
     style: "🟢",
   },
   {
-    id: 1,
+    id: 2,
     image: comfystore,
     link: "https://comfy-store77.vercel.app/",
     name: "Comfy Store",
@@ -37,7 +47,7 @@ const ProjectsNew = [
     style: "🟠",
   },
   {
-    id: 2,
+    id: 3,
     image: cryptofolio,
     link: "https://crypto-folio-gamma.vercel.app/",
     name: "CryptoFolio",
@@ -47,7 +57,7 @@ const ProjectsNew = [
     style: "🟢",
   },
   {
-    id: 3,
+    id: 4,
     image: wordsearch,
     link: "https://calm-begonia-aa5a26.netlify.app/",
     name: "Word search",
@@ -57,7 +67,7 @@ const ProjectsNew = [
     style: "🟢",
   },
   {
-    id: 4,
+    id: 5,
     image: loginregister,
     link: "https://react-7-e9sg.vercel.app/",
     name: "Login-Signup",
@@ -67,7 +77,7 @@ const ProjectsNew = [
     style: "🟠",
   },
   {
-    id: 5,
+    id: 6,
     image: myprofile,
     link: "old-profile-git-main-azizullokhs-projects.vercel.app",
     name: "My Profile",
@@ -78,7 +88,7 @@ const ProjectsNew = [
     style: "🟢",
   },
   {
-    id: 6,
+    id: 7,
     image: pizzalayout,
     link: "https://old-project-kuda-pizza.vercel.app/",
     name: "Kuda Pizza",
@@ -89,7 +99,7 @@ const ProjectsNew = [
     style: "🟢",
   },
   {
-    id: 7,
+    id: 8,
     image: girllayout,
     link: "https://old-project-beta.vercel.app/",
     technologies: ["HTML", "CSS"],
@@ -100,7 +110,7 @@ const ProjectsNew = [
     style: "🟢",
   },
   {
-    id: 8,
+    id: 9,
     image: todolist,
     link: "https://todo-list-delta-mocha-61.vercel.app/",
     technologies: ["JS", "CSS"],
@@ -110,7 +120,7 @@ const ProjectsNew = [
     style: "🟢",
   },
   {
-    id: 9,
+    id: 10,
     image: moviesearch,
     link: "https://movie-search-1sr1.vercel.app/",
     technologies: ["JS", "CSS", "REST API"],
@@ -120,7 +130,7 @@ const ProjectsNew = [
     style: "🔴",
   },
   {
-    id: 10,
+    id: 11,
     image: pomodoro,
     link: "https://react-13-woad.vercel.app/",
     technologies: ["React.js", "Tailwind CSS"],
@@ -130,7 +140,7 @@ const ProjectsNew = [
     style: "🟠",
   },
   {
-    id: 11,
+    id: 12,
     image: uzlayout,
     link: "https://react-23-lovat.vercel.app/",
     technologies: ["React", "Tailwind CSS", "Chart.js"],
@@ -141,7 +151,7 @@ const ProjectsNew = [
     style: "🟢",
   },
   {
-    id: 12,
+    id: 13,
     image: githubusers,
     link: "https://search-for-github-users-nu.vercel.app/",
     technologies: ["JS", "CSS", "REST API"],
